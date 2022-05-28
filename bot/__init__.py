@@ -34,7 +34,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 LOGGER = logging.getLogger(__name__)
 
-load_dotenv('config.env')
+load_dotenv('config6.env')
 
 Interval = []
 
