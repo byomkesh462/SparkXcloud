@@ -130,11 +130,12 @@ try:
     AUTO_DELETE_MESSAGE_DURATION = int(getConfig('AUTO_DELETE_MESSAGE_DURATION'))
     TELEGRAM_API = getConfig('TELEGRAM_API')
     TELEGRAM_HASH = getConfig('TELEGRAM_HASH')
-    UPSTREAM_REPO = getConfig('UPSTREAM_REPO')
-    UPSTREAM_BRANCH = getConfig('UPSTREAM_BRANCH')
 except KeyError as e:
     LOGGER.error("One or more env variables missing! Exiting now")
     sys.exit(1)
+
+UPSTREAM_REPO = getConfig('UPSTREAM_REPO')
+UPSTREAM_BRANCH = getConfig('UPSTREAM_BRANCH')
 try:
     DB_URI = getConfig('DATABASE_URL')
     if len(DB_URI) == 0:
